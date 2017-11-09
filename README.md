@@ -14,13 +14,14 @@ Example
 ## Installation
 
 ### Installer
-```
+```bash
   bash <(curl -s0 https://raw.githubusercontent.com/ElateralLtd/git-commit-template/master/install.sh)
 ```
 
 ### Manual
-- git clone `https://github.com/ElateralLtd/git-commit-template.git` ~/elateral/git
-- run `git config --global commit.template ~/.git-commit-template.txt`
-   - this will use the template whenever `git commit` is called
-- run `git config --global commit.cleanup strip`
-   - this will prevent git from committing the template
+
+```bash
+  git clone `https://github.com/ElateralLtd/git-commit-template.git` ~/.elateral/git-commit-template
+  git config --global commit.template ~/.elateral/git-commit-template/.git-commit-template.txt
+  git config --global commit.cleanup strip
+```

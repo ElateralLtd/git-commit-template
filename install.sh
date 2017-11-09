@@ -19,19 +19,30 @@ checkDependencies() {
 checkDependencies git
 
 VERSION=1.0.0
-INSTALL_DIR=~/elateral/git-commit-template
-echo "Installing v${VERSION}"
+INSTALL_DIR=~/.elateral/git-commit-template
+OLD_INSTALL_DIR=~/elateral/git-commit-template
+echo "Installing v${VERSION} 🎉"
+
+if [ -d ${OLD_INSTALL_DIR} ];
+then
+  echo "Removing old install directory ❗️"
+  rm -rf ${OLD_INSTALL_DIR}
+fi
 
 if [ -d ${INSTALL_DIR} ];
 then
+  echo "Removing existing directory ❗️"
   rm -rf ${INSTALL_DIR}
+  echo "Creating directory 📂"
   mkdir -p ${INSTALL_DIR}
 else
+  echo "Creating directory 📂"
   mkdir -p ${INSTALL_DIR}
 fi
 
 git clone https://github.com/ElateralLtd/git-commit-template.git ${INSTALL_DIR}
 
+echo "Updating global configuration ⚙️"
 git config --global commit.template ${INSTALL_DIR}/.git-commit-message-template.txt
 git config --global commit.cleanup strip
 

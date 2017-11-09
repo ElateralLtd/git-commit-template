@@ -18,7 +18,7 @@ checkDependencies() {
 # Check if deps are present on system, if not fail build
 checkDependencies git
 
-VERSION=1.0.0
+VERSION=1.1.0
 INSTALL_DIR=~/.elateral/git-commit-template
 OLD_INSTALL_DIR=~/elateral/git-commit-template
 echo "Installing v${VERSION} 🎉"

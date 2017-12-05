@@ -16,9 +16,9 @@ checkDependencies() {
 }
 
 # Check if deps are present on system, if not fail build
-checkDependencies git
+checkDependencies git rm mkdir
 
-VERSION=1.1.0
+VERSION=1.2.0
 INSTALL_DIR=~/.elateral/git-commit-template
 OLD_INSTALL_DIR=~/elateral/git-commit-template
 echo "Installing v${VERSION} 🎉"
@@ -33,16 +33,15 @@ if [ -d ${INSTALL_DIR} ];
 then
   echo "Removing existing directory ❗️"
   rm -rf ${INSTALL_DIR}
-  echo "Creating directory 📂"
-  mkdir -p ${INSTALL_DIR}
-else
-  echo "Creating directory 📂"
-  mkdir -p ${INSTALL_DIR}
 fi
 
-git clone https://github.com/ElateralLtd/git-commit-template.git ${INSTALL_DIR}
+echo "Creating directory 📂"
+mkdir -p ${INSTALL_DIR}
 
-echo "Updating global configuration ⚙️"
+echo "Downloading template ⚡️"
+git clone --quiet https://github.com/ElateralLtd/git-commit-template.git ${INSTALL_DIR}
+
+echo "Configuring template ✨"
 git config --global commit.template ${INSTALL_DIR}/.git-commit-message-template.txt
 git config --global commit.cleanup strip
 

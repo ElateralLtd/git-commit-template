@@ -1,17 +1,17 @@
 # id:<id> <type>(<scope>): (If applied, this commit will) <subject>
 # id:12345 feat(login): add password enforcement rules
-# |<----               Try To Limit Each Line to a Maximum Of 100 Characters                 ---->|
+# |<---- Subject is maximum 50 Characters  ---->|
 
 
 # <body>
-# |<----               Try To Limit Each Line to a Maximum Of 100 Characters                 ---->|
+# |<----  Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
 
 
 # <footer>
-# |<----               Try To Limit Each Line to a Maximum Of 100 Characters                 ---->|
+# |<----  Try To Limit Each Line to a Maximum Of 72 Characters   ---->|
 
 # --- COMMIT END ---
-# https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit
+# http://bit.ly/1MmY9Nj
 #
 # Remember
 #    Do NOT capitalise the first letter in subject line
@@ -30,26 +30,33 @@
 # feat: A new feature
 # fix: A bug fix
 # docs: Documentation only changes
-# style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+# style: Changes that do not affect the meaning of the code
+# (white-space, formatting etc)
 # refactor: A code change that neither fixes a bug nor adds a feature
 # perf: A code change that improves performance
 # test: Adding missing tests or correcting existing tests
-# build Changes that affect the build system, CI configuration or external dependencies (example scopes: gulp, broccoli, npm)
+# build: Changes that affect the build system, CI or external deps
+# (gulp, broccoli, npm)
 # chore: Other changes that don't modify src or test files
 #
 # -- Scope --
-# The scope could be anything specifying place of the commit change. For example Compiler, ElementInjector, etc.
+# The scope could be anything specifying place of the commit change.
+# For example Compiler, ElementInjector, etc.
 #
 # -- Subject --
 # The subject contains a succinct description of the change:
-# use the imperative, present tense: "change" not "changed" nor "changes"
+# use imperative, present tense: "change" not "changed" nor "changes"
 # don't capitalize first letter
 # no dot (.) at the end
 #
 # -- Body --
-# Just as in the subject, use the imperative, present tense: "change" not "changed" nor "changes".
-# The body should include the motivation for the change and contrast this with previous behavior.
+# Just as in the subject, use the imperative,
+# present tense: "change" not "changed" nor "changes".
+# The body should include the motivation for the change and contrast
+# this with previous behavior.
 #
 # -- Footer --
 # The footer should contain any information about Breaking Changes.
-# Breaking Changes should start with the word BREAKING CHANGE: with a space or two newlines. The rest of the commit message is then used for this.
+# Breaking Changes should start with the word BREAKING CHANGE:
+# with a space or two newlines.
+# The rest of the commit message is then used for this.

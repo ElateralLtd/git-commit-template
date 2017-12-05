@@ -1,5 +1,5 @@
 # id:<id> <type>(<scope>): (If applied, this commit will) <subject>
-# id:12345 feat(login): add password enforcement rules
+# id:12345 feat(login): add password enforcement
 # |<---- Subject is maximum 50 Characters  ---->|
 
 
